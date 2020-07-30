@@ -1,14 +1,20 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org/">
-<head>
-    <meta charset="UTF-8">
-    <title>Enumerable Planets</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" />
-    <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+<head th:replace="fragments :: head"></head>
 
-</head>
-<body>
+<body class="container">
 <h1>Pick a planet:</h1>
 
+<table class="table table-striped">
+    <tr>
+    <th>Planets</th>
+        <th>Year Length</th>
+    </tr>
+
+    <tr th:each="planet : ${planets}">
+        <td th:text="${planet.name}"></td>
+        <td th:text="${planet.yearLength}"></td>
+    </tr>
+</table>
 </body>
 </html>

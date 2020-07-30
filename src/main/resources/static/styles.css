@@ -1,0 +1,10 @@
+body {
+  font-size: 14px;
+}
+
+
+tr:nth-child(even) {
+  color: black;
+  background-color: coral;
+  opacity: .75;
+}
